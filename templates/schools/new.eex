@@ -1,7 +1,10 @@
-<h1>Schools.new (/schools/new)</h1>
 
-<form action="/schools/" method="post" enctype="multipart/form-data">
-	<input type="text" name="name" />
-	<input type="file" name="file" />
-	<button type=submit>Create School</button>
-</form>
+
+<div class="wrapper">
+	<h1>Create new school</h1>
+	
+	<form action="/schools/" method="post" enctype="multipart/form-data" class="vertramp">
+		<input type="text" name="name" placeholder="Name of the school" class="sizeUp"/>
+		<button type=submit class="sizeUp" style="cursor: pointer;">Create School</button>
+	</form>
+</div>

@@ -2,6 +2,8 @@ body {
 	background-color: #407899;
 	margin: 0;
 	color: #FFFFF2;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	cursor: default;
 }
 
 .a{
@@ -20,7 +22,7 @@ header{
 .flex-space-between{
 	display: flex;
 	justify-content: space-between;
-	width: 200px;
+	width: 250px;
 }
 
 .flex-space-between-big{
@@ -69,4 +71,30 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.vertramp{
+	width: 295px;
+	display: flex;
+	flex-direction: column;
+}
+
+.sizeUp{
+	width: auto;
+	margin-top: 5px;
+	height: 30px;
+	font-size: 20px;
+	-webkit-box-shadow: 10px 7px 25px -4px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 7px 25px -4px rgba(0,0,0,0.75);
+	box-shadow: 10px 7px 15px -4px rgba(0,0,0,0.75);
+}
+
+.sign-out{
+	height: 30px;
+	border-radius: 10px;
+	width: 100px;
+	cursor: pointer;
+	-webkit-box-shadow: 10px 7px 25px -7px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 7px 25px -4px rgba(0,0,0,0.75);
+	box-shadow: 8px 5px 15px -4px rgba(0,0,0,0.75);
 }
