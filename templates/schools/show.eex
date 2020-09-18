@@ -1,0 +1,27 @@
+
+<h1><%= schools.name %></h1>
+
+<h2>
+
+	<div>
+	
+	<div class="classes_grouplist">classes grouplist
+	
+	<div>
+	<div> 
+		<div class="new_classes_grouplist">NEW</div>
+		<div class="upload_classes_grouplist">UPLOAD</div>
+	</div> 
+	</div> 
+
+
+
+	<div class="teachers_div">teacher div</div>
+
+	<form action="/schools/<%= schools.id %>/destroy" method="post">
+		<button type="submit">Destroy School</button>
+	</form>	
+	<button type="submit"><a href="/schools/<%= schools.id %>/edit">Edit <%= schools.name %></button></a>
+</h2>
+
+

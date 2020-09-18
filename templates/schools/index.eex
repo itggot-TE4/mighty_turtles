@@ -1,0 +1,19 @@
+<h1>All Schools</h1>
+
+
+
+
+<ul>
+  <%= for school <- schools do %>
+    <li>
+    	<a href="/schools/<%= school.id %>">
+			<%= school.name %>
+		</a>
+		<div>Edit</div> <div>Remove</div>
+		<br>
+	</li>
+  <% end %>
+</ul>
+<a href="/schools/new">Add new school</a>
+
+
