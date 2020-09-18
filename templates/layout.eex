@@ -5,6 +5,17 @@
 	<link rel="stylesheet" type="text/css" href="/pluggy.css">
 </head>
 <body>
+	<header>
+		<h1>What's their face?</h1>
+		<div class="flex-space-between">
+			<div class="flex-center" style="height: 30px;border-radius: 10px;width: auto;">Name Namesson</div>
+			<div class="sign-out flex-center">SIGN OUT</div>
+		</div>
+	</header>
+
 	<%= template %>
+
+<footer></footer>
+
 </body>
 </html>

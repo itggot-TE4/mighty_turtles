@@ -1,11 +1,3 @@
-<header>
-	<h1>What's their face?</h1>
-	<div class="flex-space-between">
-		<div>Name Namesson</div>
-		<div>SIGN OUT</div>
-	</div>
-</header>
-
 <div class="wrapper">
 	<h2 style="font-size: 3em;">Scroll down in list to the left for more schools</h2>
 	<div class="flex-space-between-big">
@@ -26,5 +18,3 @@
 		</div>
 	</div>
 </div>
-
-<footer></footer>
