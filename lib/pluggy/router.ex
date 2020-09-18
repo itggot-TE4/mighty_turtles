@@ -32,6 +32,7 @@ defmodule Pluggy.Router do
   get("/schools/:id/edit", do: SchoolController.edit(conn, id))
   get("/schools/:id/class", do: SchoolController.class(conn, id))
 
+
   post("/schools", do: SchoolController.create(conn, conn.body_params))
 
   # should be put /fruits/:id, but put/patch/delete are not supported without hidden inputs

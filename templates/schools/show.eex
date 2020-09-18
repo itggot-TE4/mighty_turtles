@@ -1,5 +1,5 @@
 
-<h1><a href="/schools/<%= schools.id %>/edit"><%= schools.name %></a></h1>
+<h1><%= schools.name %></h1>
 
 <h2>
 

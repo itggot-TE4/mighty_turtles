@@ -24,7 +24,6 @@ defmodule Pluggy.SchoolController do
   def new(conn), do: send_resp(conn, 200, render("schools/new", []))
   def show(conn, id), do: send_resp(conn, 200, render("schools/show", schools: School.get(id)))
   def edit(conn, id), do: send_resp(conn, 200, render("schools/edit", schools: School.get(id)))
-
   def class(conn, id), do: send_resp(conn, 200, render("schools/class", schools: School.get(id)))
 
   def create(conn, params) do
