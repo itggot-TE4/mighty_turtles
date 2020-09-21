@@ -1,50 +1,41 @@
 
-<h1><%= schools.name %></h1>
+<h1>Add a new teacher</h1>
 
 <h2>
 
 	<div>
-	<form action="/" method="post">
-	<label for="Teacher">Teacher</label>
-	<input type="text" name="teacher" id="teacher" />
-	<label for="Class">Class</lagel>
-	<input type="Class" name="Class" id="class" />
-	<button type="Add">Add Teacher & Class</button>
-	<form action="/" method="post">
-		<button type="submit">Remove Teacher</button>
-	</form>	
+	<form action="/schools/<%= schools.id %>/new_teacher" method="post">
+	<label for="teacher">Teacher</label>
+	<input type="text" name="teacher"/>
+	<label for="class">Class</lagel>
+	<input type="Class" name="class"/>
+	<button type="add">Add Teacher & Class</button>
+
+<h1>All Teachers on <%= schools.name %></h1>
 	<ul>
-	
- 		<li>
-	       Gunnar 1C
-			<br>
-		</li>
+		<%= for teacher <- teacher_table do %>
+			<li>
+				<%= teacher.teacher_name %>, is a teacher for: <%= teacher.classes %>
+				
+				<div>Edit teacher</div>
+					<form action="/" method="post">
+						<button type="submit">Remove Teacher</button>
+					</form>	
+					<br>
+			</li>
 
-		<li>
-	       Gunnar 1C
-			<br>
-		</li>
-
-		<li>
-	       Gunnar 1C
-			<br>
-		</li>
-
+		<% end %>
 	</ul>
 	</div>
 
 	<div>
 	</form>
 	<br>
-	<form action="/" method="post">
-	<label for="Class">Classes</label>
-	<input type="text" name="classes" id="class" />
-	<button type="Add">Add Class</button>
-	<form action="/" method="post">
-		<button type="submit">Remove Class</button>
-
+	<form action="/class/new" method="post">
+	<label for="class">New class</label>
+	<input type="text" name="classes"/>
+	<button type="add">Add Class</button>
 	
-	</form>	
 	
 
 	<ul>
@@ -55,6 +46,9 @@
 			<a href="/schools/<%= schools.id %>/class"
 			<button type="submit">Edit Class</button>
 			</a>
+			<form action="/destroy_class" method="post">
+				<button type="submit">Remove Class</button>
+			</form>	
 			<br>
 		</li>
 

@@ -1,7 +1,9 @@
 defmodule Pluggy.SchoolController do
   require IEx
 
+  #alias Pluggy.Students
   alias Pluggy.School
+  alias Pluggy.Teacher
   alias Pluggy.User
   import Pluggy.Template, only: [render: 2]
   import Plug.Conn, only: [send_resp: 3]
@@ -22,7 +24,7 @@ defmodule Pluggy.SchoolController do
 
   #render använder eex
   def new(conn), do: send_resp(conn, 200, render("schools/new", []))
-  def show(conn, id), do: send_resp(conn, 200, render("schools/show", schools: School.get(id)))
+  def show(conn, id), do: send_resp(conn, 200, render("schools/show", [schools: School.get(id), teacher_table: Teacher.all()]))
   def edit(conn, id), do: send_resp(conn, 200, render("schools/edit", schools: School.get(id)))
   def class(conn, id), do: send_resp(conn, 200, render("schools/class", schools: School.get(id)))
 

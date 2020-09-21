@@ -29,8 +29,9 @@ defmodule Pluggy.Router do
   get("/schools", do: SchoolController.index(conn))
   get("/schools/new", do: SchoolController.new(conn))
   get("/schools/:id", do: SchoolController.show(conn, id))
+  # post("/schools/:id", do: SchoolController.show(conn, id))
   get("/schools/:id/edit", do: SchoolController.edit(conn, id))
-  get("/schools/:id/class", do: SchoolController.class(conn, id))
+  get("/schools/:id/class/", do: SchoolController.class(conn, id))
 
 
   post("/schools", do: SchoolController.create(conn, conn.body_params))
@@ -43,6 +44,7 @@ defmodule Pluggy.Router do
 
   post("/users/login", do: UserController.login(conn, conn.body_params))
   post("/users/logout", do: UserController.logout(conn))
+  post("/schools/:id/new_teacher", do: UserController.create(conn))
 
   match _ do
     send_resp(conn, 404, "oops")

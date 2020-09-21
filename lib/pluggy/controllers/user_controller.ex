@@ -1,6 +1,10 @@
 defmodule Pluggy.UserController do
   # import Pluggy.Template, only: [render: 2] #det här exemplet renderar inga templates
   import Plug.Conn, only: [send_resp: 3]
+  import Pluggy.User
+
+  alias Pluggy.User
+  alias Pluggy.Teacher
 
   def login(conn, params) do
     username = params["username"]
@@ -33,6 +37,12 @@ defmodule Pluggy.UserController do
   def logout(conn) do
     Plug.Conn.configure_session(conn, drop: true) #tömmer sessionen
     |> redirect("/schools/list")
+  end
+
+  def create(conn) do
+    User.create(conn)
+    id = conn.path_params["id"]
+    redirect(conn, "/schools/#{id}")
   end
 
   # def create(conn, params) do

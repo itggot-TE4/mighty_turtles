@@ -10,6 +10,17 @@ defmodule Pluggy.User do
     |> to_struct
   end
 
+
+
+  def create(conn) do
+    teacher = conn.params["teacher"]
+    class = conn.params["class"]
+
+    Postgrex.query!(DB, "INSERT INTO teacher_table (teacher_name, classes) VALUES ($1, $2)", [teacher, class],
+      pool: DBConnection.ConnectionPool
+    )
+  end
+
   def to_struct([[id, username]]) do
     %User{id: id, username: username}
   end
