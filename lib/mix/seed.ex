@@ -24,7 +24,7 @@ defmodule Mix.Tasks.Seed do
     Postgrex.query!(DB, "Create TABLE schools (id SERIAL, name TEXT NOT NULL UNIQUE)", [], pool: DBConnection.ConnectionPool)
 
     #För Lärare
-    Postgrex.query!(DB, "Create TABLE teacher_table (teacher_id SERIAL, teacher_name TEXT NOT NULL, classes TEXT UNIQUE)", [], pool: DBConnection.ConnectionPool)
+    Postgrex.query!(DB, "Create TABLE teacher_table (teacher_id SERIAL, teacher_name TEXT NOT NULL, classes TEXT)", [], pool: DBConnection.ConnectionPool)
 
 
     Postgrex.query!(DB, "Create TABLE students (id SERIAL, student_name TEXT NOT NULL, group_id TEXT)", [], pool: DBConnection.ConnectionPool)
