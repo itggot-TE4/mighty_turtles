@@ -37,7 +37,7 @@ defmodule Pluggy.Teacher do
   end
 
   def delete(id) do
-    Postgrex.query!(DB, "DELETE FROM teacher_table WHERE id = $1", [String.to_integer(id)],
+    Postgrex.query!(DB, "DELETE FROM teacher_table WHERE teacher_id = $1", [String.to_integer(id)],
       pool: DBConnection.ConnectionPool
     )
   end

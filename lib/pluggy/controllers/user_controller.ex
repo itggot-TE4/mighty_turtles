@@ -45,6 +45,13 @@ defmodule Pluggy.UserController do
     redirect(conn, "/schools/#{id}")
   end
 
+  def destroy2(conn, id) do
+    IO.inspect(id)
+    |>
+    Teacher.delete()
+    redirect(conn, "/schools/")
+  end
+
   # def create(conn, params) do
   # 	#pseudocode
   # 	# in db table users with password_hash CHAR(60)

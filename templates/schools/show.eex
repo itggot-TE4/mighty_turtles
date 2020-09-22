@@ -16,12 +16,15 @@
 		<%= for teacher <- teacher_table do %>
 			<li>
 				<%= teacher.teacher_name %>, is a teacher for: <%= teacher.classes %>
-				
-				<div>Edit teacher</div>
-					<form action="/" method="post">
-						<button type="submit">Remove Teacher</button>
-					</form>	
-					<br>
+
+				<a href="/schools/<%= schools.id %>/class"
+					<button type="submit">Edit Class</button>
+				</a>
+				<form action="/schools/<%= schools.id %>/destroy2" method="post">
+					<input type="hidden" value="<%= teacher.teacher_id %>" name="teacher_id"></input>
+					<button type="submit">Eliminate Teacher</button>
+				</form>
+				<br>
 			</li>
 
 		<% end %>
@@ -35,20 +38,20 @@
 	<label for="class">New class</label>
 	<input type="text" name="classes"/>
 	<button type="add">Add Class</button>
-	
-	
+
+
 
 	<ul>
-	
+
  		<li>
 	       1C
-		   	
+
 			<a href="/schools/<%= schools.id %>/class"
 			<button type="submit">Edit Class</button>
 			</a>
 			<form action="/destroy_class" method="post">
 				<button type="submit">Remove Class</button>
-			</form>	
+			</form>
 			<br>
 		</li>
 

@@ -21,6 +21,12 @@ defmodule Pluggy.User do
     )
   end
 
+  def delete(id) do
+    Postgrex.query!(DB, "DELETE FROM teacher_table WHERE teacher_id = $1", [String.to_integer(id)],
+      pool: DBConnection.ConnectionPool
+    )
+  end
+
   def to_struct([[id, username]]) do
     %User{id: id, username: username}
   end
