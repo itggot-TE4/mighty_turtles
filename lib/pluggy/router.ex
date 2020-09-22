@@ -26,6 +26,7 @@ defmodule Pluggy.Router do
   plug(:match)
   plug(:dispatch)
 
+  get("/login", do: SchoolController.login(conn))
   get("/schools", do: SchoolController.index(conn))
   get("/schools/new", do: SchoolController.new(conn))
   get("/schools/:id", do: SchoolController.show(conn, id))

@@ -98,3 +98,30 @@ header{
 	-moz-box-shadow: 10px 7px 25px -4px rgba(0,0,0,0.75);
 	box-shadow: 8px 5px 15px -4px rgba(0,0,0,0.75);
 }
+
+.username{
+	font-size: small;
+
+}
+
+
+.password{
+	font-size: small;
+
+}
+
+a.schools{
+	font-size: 100px;
+	text-decoration: none;
+	color: white;
+
+
+}
+
+.stora{
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
