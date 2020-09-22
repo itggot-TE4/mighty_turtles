@@ -149,3 +149,25 @@ header{
 	height: 300px;
 	width: 100%;
 }
+
+.username{
+	font-size: small;
+}
+
+
+.password{
+	font-size: small;
+}
+
+a.schools{
+	font-size: 100px;
+	text-decoration: none;
+	color: white;
+}
+
+.stora{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}

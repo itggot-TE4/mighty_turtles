@@ -1,0 +1,22 @@
+<h1> Hejsan och välkommen till våran fantastiska sida! </h1>
+    <div class="stora">
+        <div class="usernamer">
+
+            <form action="hej rasmus" method="post">
+            <label for="teacher">Username</label>
+            <input type="text" name="teacher"/>
+
+        </div>
+        
+        <div class="password>
+            
+            <label for="class">Password</lagel>
+            <input type="Class" name="class"/>
+            
+        
+        <div class="login">
+         <a class="schools" href="/schools"
+            <button type="add">Login</button>
+            </a>
+        </div>
+    </div>

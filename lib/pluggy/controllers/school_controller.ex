@@ -27,6 +27,7 @@ defmodule Pluggy.SchoolController do
   def show(conn, id), do: send_resp(conn, 200, render("schools/show", [schools: School.get(id), teacher_table: Teacher.all()]))
   def edit(conn, id), do: send_resp(conn, 200, render("schools/edit", schools: School.get(id)))
   def class(conn, id), do: send_resp(conn, 200, render("schools/class", schools: School.get(id)))
+  def login(conn), do: send_resp(conn, 200, render("schools/login", []))
 
   def create(conn, params) do
     School.create(params)
