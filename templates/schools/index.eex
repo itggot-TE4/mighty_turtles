@@ -1,15 +1,17 @@
 <div class="wrapper">
-	<h2 style="font-size: 3em;">Scroll down in list to the left for more schools</h2>
 	<div class="flex-space-between-big">
-		<div class="scroll-y">
-		<%= for school <- schools do %>
-			<div class="school-styling flex-center">
-				<a href="/schools/<%= school.id %>" style="text-decoration: none;color: #FFFFF2">
-				<%= school.name %> 
-				</a>
+		<div>
+			<h2 class="wrapper-h2-style">Schools</h2>
+			<div class="scroll-y">
+			<%= for school <- schools do %>
+				<div class="school-styling flex-center">
+					<a href="/schools/<%= school.id %>" style="text-decoration: none;color: #FFFFF2">
+					<%= school.name %>
+					</a>
+				</div>
+				<br>
+			<% end %>
 			</div>
-			<br>
-		<% end %>
 		</div>
 		<div class="school-styling flex-center">
 				<a href="/schools/new" style="text-decoration: none;color: #FFFFF2">

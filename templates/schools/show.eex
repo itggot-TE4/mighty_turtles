@@ -1,79 +1,90 @@
+<div class="wrapper-showSchool">
+	<div class="adjust">
+		<div>
+			<h1>All Teachers on <%= schools.name %></h1>
+			<ul style="height:300px;overflow-y:scroll;">
+				<%= for teacher <- teacher_table do %>
+					<li>
+						<%= teacher.teacher_name %>, is a teacher for: <%= teacher.classes %>
 
-<h1>Add a new teacher</h1>
+						<a href="/schools/<%= schools.id %>/class"
+							<button type="submit">Edit Class</button>
+						</a>
+						<form action="/schools/<%= schools.id %>/destroy2" method="post">
+							<input type="hidden" value="<%= teacher.teacher_id %>" name="teacher_id"></input>
+							<button type="submit">Eliminate Teacher</button>
+						</form>
+						<br>
+					</li>
+				<% end %>
+			</ul>
+		</div>
 
-<h2>
+		<div class="new-teacher">
+			<div style="font-size:30px;">Add a new teacher</div>
+				<form class="new-teacher-form" action="/schools/<%= schools.id %>/new_teacher" method="post">
+					<div class="small-grid">
 
-	<div>
-	<form action="/schools/<%= schools.id %>/new_teacher" method="post">
-	<label for="teacher">Teacher</label>
-	<input type="text" name="teacher"/>
-	<label for="class">Class</lagel>
-	<input type="Class" name="class"/>
-	<button type="add">Add Teacher & Class</button>
+							<label class="grid-area: teacher1" for="teacher">Teacher</label>
+							<input class="grid-area: teacher1" type="text" name="teacher"/>
 
-<h1>All Teachers on <%= schools.name %></h1>
-	<ul>
-		<%= for teacher <- teacher_table do %>
+							<label class="grid-area: teacher1" for="class">Class</label>
+							<input class="grid-area: teacher1" type="Class" name="class"/>
+					</div>
+				<button type="add">Add Teacher & Class</button>
+				</form>
+		</div>
+	</div>
+
+	<div style="margin-top:70px;" class="flex-center">
+
+		<form action="/class/new" method="post">
+		<label for="class">New class</label>
+		<input type="text" name="classes"/>
+		<button type="add">Add Class</button>
+
+		<ul>
 			<li>
-				<%= teacher.teacher_name %>, is a teacher for: <%= teacher.classes %>
-
-				<a href="/schools/<%= schools.id %>/class"
-					<button type="submit">Edit Class</button>
+			1C
+					<a href="/schools/<%= schools.id %>/class"
+				<button type="submit">Edit Class</button>
 				</a>
-				<form action="/schools/<%= schools.id %>/destroy2" method="post">
-					<input type="hidden" value="<%= teacher.teacher_id %>" name="teacher_id"></input>
-					<button type="submit">Eliminate Teacher</button>
+				<br>
+				<form action="/destroy_class" method="post">
+					<button type="submit">Remove Class</button>
+				</form>
+			</li>
+			<br>
+
+			<li>
+			2C
+					<a href="/schools/<%= schools.id %>/class"
+				<button type="submit">Edit Class</button>
+				</a>
+				<form action="/destroy_class" method="post">
+					<button type="submit">Remove Class</button>
+				</form>
+
+			</li>
+			<br>
+
+			<li>
+				3C
+						<a href="/schools/<%= schools.id %>/class"
+				<button type="submit">Edit Class</button>
+				</a>
+				<form action="/destroy_class" method="post">
+					<button type="submit">Remove Class</button>
 				</form>
 				<br>
 			</li>
 
-		<% end %>
-	</ul>
+		</ul>
+
 	</div>
 
-	<div>
-	</form>
-	<br>
-	<form action="/class/new" method="post">
-	<label for="class">New class</label>
-	<input type="text" name="classes"/>
-	<button type="add">Add Class</button>
-
-
-
-	<ul>
-
- 		<li>
-	       1C
-
-			<a href="/schools/<%= schools.id %>/class"
-			<button type="submit">Edit Class</button>
-			</a>
-			<form action="/destroy_class" method="post">
-				<button type="submit">Remove Class</button>
-			</form>
-			<br>
-		</li>
-
-		<li>
-	       2C
-		   		<a href="/schools/<%= schools.id %>/class"
-			<button type="submit">Edit Class</button>
-			</a>
-			<br>
-		</li>
-
-		<li>
-	    	3C
-					<a href="/schools/<%= schools.id %>/class"
-			<button type="submit">Edit Class</button>
-			</a>
-			<br>
-		</li>
-
-	</ul>
-
-	<div>
-</h2>
-<form action="/schools/<%= schools.id %>/destroy" method="post">
-		<button type="submit">Destroy <%= schools.name %></button>
+	<div class="flex-center another-one-bites-the-dust">
+		<form action="/schools/<%= schools.id %>/destroy" method="post">
+		<button style="height:200px;width:800px;background-color:red;color:white;font-size:5rem;" type="submit">Destroy <%= schools.name %></button>
+	</div>
+</div>

@@ -39,6 +39,12 @@ header{
 	align-items: center;
 }
 
+.wrapper-h2-style{
+	font-size: 3em;
+	display: flex;
+	justify-content: center;
+}
+
 .scroll-y{
 	background-color: #FFFFF2;
 	height: 480px;
@@ -62,6 +68,7 @@ header{
 }
 .school-styling:last-child{
 	font-size: 2rem;
+	margin-top: 138px;
 	-webkit-box-shadow: 10px 7px 25px -4px rgba(0,0,0,0.75);
 	-moz-box-shadow: 10px 7px 25px -4px rgba(0,0,0,0.75);
 	box-shadow: 10px 7px 25px -4px rgba(0,0,0,0.75);
@@ -97,4 +104,48 @@ header{
 	-webkit-box-shadow: 10px 7px 25px -7px rgba(0,0,0,0.75);
 	-moz-box-shadow: 10px 7px 25px -4px rgba(0,0,0,0.75);
 	box-shadow: 8px 5px 15px -4px rgba(0,0,0,0.75);
+}
+
+.wrapper-showSchool{
+	display: grid;
+	grid-template-rows: auto auto auto;
+}
+
+.new-teacher{
+	background-color: #41D3BD;
+	font-size: 30px;
+	width: 350px;
+	height: 200px;
+	border-radius: 30px;
+	display: grid;
+	grid-template-rows: auto auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.new-teacher-form{
+	display: grid;
+	grid-template-rows: 100px 100px;
+	grid-template-rows: auto auto;
+}
+
+.small-grid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr 1fr;
+	grid-template-areas: 
+	"teacher1 teacher2"
+	"class1 class2";
+}
+
+.adjust{
+	margin-top: 30px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.another-one-bites-the-dust{
+	height: 300px;
+	width: 100%;
 }
